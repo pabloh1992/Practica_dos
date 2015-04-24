@@ -25,7 +25,7 @@ import java.util.Calendar;
 public class MainActivity extends ActionBarActivity {
 
     int flag = 0;
-    int flagh = 0;
+    int checkflag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class MainActivity extends ActionBarActivity {
         final TextView hobbies = (TextView) findViewById(R.id.thobbie);
         final TextView tciudad = (TextView) findViewById(R.id.tciudad);
         Button boton = (Button) findViewById(R.id.boton);
+
         final Spinner spinner = (Spinner) findViewById(R.id.ciudad_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -66,55 +67,54 @@ public class MainActivity extends ActionBarActivity {
                     tsexo.setText("Mujer");
                 }
 
-                //hobbies.setText(String.valueOf(flagh));
-                if (flagh == 1) {
+                if (checkflag == 1)
                     hobbies.setText("Deporte");
-                }
-                if (flagh == 2) {
+
+                if (checkflag == 2)
                     hobbies.setText("Leer");
-                }
-                if (flagh == 4) {
+
+                if (checkflag == 4)
                     hobbies.setText("Videojuegos");
-                }
-                if (flagh == 8) {
+
+                if (checkflag == 8)
                     hobbies.setText("Cocinar");
-                }
-                if (flagh == 3) {
+
+                if (checkflag == 3)
                     hobbies.setText("Deporte y Leer");
-                }
-                if (flagh == 5) {
+
+                if (checkflag == 5)
                     hobbies.setText("Deporte y Videojuegos");
-                }
-                if (flagh == 9) {
+
+                if (checkflag == 9)
                     hobbies.setText("Deporte y Cocinar");
-                }
-                if (flagh == 6) {
+
+                if (checkflag == 6)
                     hobbies.setText("Leer y Videojuegos");
-                }
-                if (flagh == 10) {
+
+                if (checkflag == 10)
                     hobbies.setText("Leer y Cocinar");
-                }
-                if (flagh == 12) {
+
+                if (checkflag == 12)
                     hobbies.setText("Videojuegos y Cocinar");
-                }
-                if (flagh == 7) {
+
+                if (checkflag == 7)
                     hobbies.setText("Deporte, Leer y Videojuegos");
-                }
-                if (flagh == 14) {
+
+                if (checkflag == 14)
                     hobbies.setText("Leer, Videojuegos y Cocinar");
-                }
-                if (flagh == 11) {
+
+                if (checkflag == 11)
                     hobbies.setText("Deporte, Leer y Cocinar");
-                }
-                if (flagh == 13) {
+
+                if (checkflag == 13)
                     hobbies.setText("Deporte, Videojuegos y Cocinar");
-                }
-                if (flagh == 15) {
+
+                if (checkflag == 15)
                     hobbies.setText("Deporte, Leer, Videojuegos y Cocinar");
-                }
-                if (flagh == 0) {
+
+                if (checkflag == 0)
                     hobbies.setText("Hobbies");
-                }
+
 
                 tciudad.setText(String.valueOf(spinner.getSelectedItem()));
             }
@@ -182,14 +182,9 @@ public class MainActivity extends ActionBarActivity {
             if(month==9){smonth="10";}
             if(month==10){smonth="11";}
             if(month==11){smonth="12";}
-   //         Button boton = (Button) getActivity().findViewById(R.id.boton);
+
             final String finalSmonth = smonth;
-   //         boton.setOnClickListener(new View.OnClickListener() {
-    //            @Override
-    //            public void onClick(View v) {
                     tnacimiento.setText(sday+" / "+ finalSmonth +" / "+syear);
-    //            }
-    //        });
 
         }
     }
@@ -240,28 +235,36 @@ public class MainActivity extends ActionBarActivity {
         // Check which checkbox was clicked
         switch(view.getId()) {
             case R.id.checkbox_h1:
-                if (checked){flagh=flagh+1;}
+                if (checked)
+                    checkflag=checkflag+1;
 
-                else{flagh=flagh-1;}
+                else
+                    checkflag=checkflag-1;
 
                 break;
             case R.id.checkbox_h2:
-                if (checked){flagh=flagh+2;}
+                if (checked)
+                    checkflag=checkflag+2;
 
-                else{flagh=flagh-2;}
+                else
+                    checkflag=checkflag-2;
 
                 break;
             case R.id.checkbox_h3:
-                if (checked){flagh=flagh+4;}
+                if (checked)
+                    checkflag=checkflag+4;
 
-                else{flagh=flagh-4;}
+                else
+                    checkflag=checkflag-4;
 
                 break;
             case R.id.checkbox_h4:
-                if (checked){flagh=flagh+8;}
-                // Cheese me
-                else{flagh=flagh-8;}
-                // I'm lactose intolerant
+                if (checked)
+                    checkflag=checkflag+8;
+
+                else
+                    checkflag=checkflag-8;
+
                 break;
         }
     }
