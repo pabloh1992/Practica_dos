@@ -20,7 +20,7 @@
     <string name="videojuegos">Videojuegos</string>
     <string name="cocinar">Cocinar</string>
     <string name="ciudad">Ciudad</string>
-    <string name="nacimiento">Nacimiento</string>
+    <string name="nacimiento">Fecha de Nacimiento</string>
 
     <string-array name="cities_array">
         <item>Arauca</item>
