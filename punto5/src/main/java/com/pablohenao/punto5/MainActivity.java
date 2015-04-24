@@ -119,10 +119,7 @@ public class MainActivity extends ActionBarActivity {
                 tciudad.setText(String.valueOf(spinner.getSelectedItem()));
             }
         });
-
-
         //TextView
-
     }
 
     public void showDatePickerDialog(View v) {
