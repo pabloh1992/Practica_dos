@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!-- tools:context=".MainActivity"> -->
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/num1"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:layout_weight="1.8"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:layout_weight="1"
+        android:id="@+id/enum1"/>
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/num2"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:layout_weight="1.8"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:layout_weight="1"
+        android:id="@+id/enum2"/>
+</LinearLayout>
+
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RadioButton android:id="@+id/esuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/suma"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton android:id="@+id/eresta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resta"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton android:id="@+id/emultiplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/multiplicacion"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton android:id="@+id/edivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/division"
+        android:onClick="onRadioButtonClicked"/>
+</RadioGroup>
+
+<Button
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:text="@string/boton"
+    android:layout_gravity="center"
+    android:textSize="20dp"
+    android:id="@+id/boton"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/resultado"
+    android:textSize="20dp"
+    android:id="@+id/tResultado"/>
+
+</LinearLayout>

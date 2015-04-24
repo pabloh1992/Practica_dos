@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Punto3</string>
+    <string name="quices">Quices (15%)</string>
+    <string name="exposiciones">Exposiciones (10%)</string>
+    <string name="lab">Laboratorio (40%)</string>
+    <string name="proyecto">Proyecto Final (35%) </string>
+    <string name="action_settings">Settings</string>
+    <string name="boton">Calcular</string>
+    <string name="definitiva">Definitiva</string>
+</resources>
