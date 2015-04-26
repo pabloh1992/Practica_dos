@@ -5,19 +5,19 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="textViewStyle" parent="@android:style/TextAppearance.Medium">
+    <style name="FuenteTipo3" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/maroon</item>
         <item name="android:typeface">monospace</item>
-
     </style>
-    <style name="textViewStyle.grande">
+    <style name="FuenteTipo3.grande">
         <item name="android:textSize">18pt</item>
     </style>
 
-    <style name="AppBaseTheme" parent="android:Theme.Translucent"></style>
-    <style name="tema" parent="AppBaseTheme">
+    <style name="tema" parent="android:Theme.Translucent">
         <item name="android:windowBackground">@color/white</item>
         <item name="android:colorBackground">@color/darkred</item>
+        <item name="android:textColor">@color/darkblue</item>
+        <item name="android:typeface">monospace</item>
 
     </style>
 

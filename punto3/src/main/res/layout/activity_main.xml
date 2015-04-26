@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:theme="@style/tema"
     android:layout_height="match_parent">
 
 <LinearLayout
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/quices"
         android:textSize="20dp"
-        android:textColor="@color/indigo"
+        android:textAppearance="@style/FuenteTipo3"
         android:layout_weight="1.8"/>
 
     <EditText
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="@string/exposiciones"
         android:textSize="20dp"
-        android:textColor="@color/indigo"
+        android:textAppearance="@style/FuenteTipo3"
         android:layout_weight="1.8"/>
 
     <EditText
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="@string/lab"
         android:textSize="20dp"
-        android:textColor="@color/indigo"
+        android:textAppearance="@style/FuenteTipo3"
         android:layout_weight="1.8"/>
 
     <EditText
@@ -81,7 +82,7 @@
         android:layout_height="wrap_content"
         android:text="@string/proyecto"
         android:textSize="20dp"
-        android:textColor="@color/indigo"
+        android:textAppearance="@style/FuenteTipo3"
         android:layout_weight="1.8"/>
 
     <EditText
