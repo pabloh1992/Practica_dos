@@ -5,4 +5,22 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="textViewStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/maroon</item>
+        <item name="android:typeface">monospace</item>
+
+    </style>
+    <style name="textViewStyle.grande">
+        <item name="android:textSize">18pt</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Translucent"></style>
+    <style name="tema" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/darkred</item>
+
+    </style>
+
+
+
 </resources>
