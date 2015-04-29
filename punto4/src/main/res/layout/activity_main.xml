@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:text="@string/base"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo4"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="@string/altura"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo4"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="@string/radio"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo4"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:text="@string/lado"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo4"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -96,21 +96,25 @@
         <RadioButton android:id="@+id/ecuadro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo4b"
             android:text="@string/cuadro"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/etriangulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo4b"
             android:text="@string/triangulo"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/erectangulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo4b"
             android:text="@string/rectangulo"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/ecirculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo4b"
             android:text="@string/circulo"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
@@ -127,6 +131,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/resultado"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/FuenteTipo4b"
+        android:layout_gravity="center"
         android:textSize="20dp"
         android:id="@+id/tResultado"/>
 

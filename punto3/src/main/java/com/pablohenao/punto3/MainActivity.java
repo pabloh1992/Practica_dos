@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
     double resultado = 0;
+    static final String STATE_resultado = "saveresultado";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
 
                 String num1s = equices.getText().toString();
                 if(num1s.isEmpty()){
-                    equices.setError("Nota no válida");
+                    equices.setError(getResources().getString(R.string.error));
                     num1d = 0;
                     flag=1;
 
@@ -47,12 +48,12 @@ public class MainActivity extends ActionBarActivity {
                     num1d = Double.parseDouble(num1s);
                     if(num1d>5){
                         flag=1;
-                        equices.setError("Nota no válida");
+                        equices.setError(getResources().getString(R.string.error));
                     }
 
                 String num2s = eexposiciones.getText().toString();
                 if(num2s.isEmpty()){
-                    eexposiciones.setError("Nota no válida");
+                    eexposiciones.setError(getResources().getString(R.string.error));
                     num2d = 0;
                     flag=1;
                 }
@@ -60,13 +61,13 @@ public class MainActivity extends ActionBarActivity {
                     num2d = Double.parseDouble(num2s);
                 if(num2d>5){
                     flag=1;
-                    eexposiciones.setError("Nota no válida");
+                    eexposiciones.setError(getResources().getString(R.string.error));
                 }
 
                 String num3s = elab.getText().toString();
 
                 if(num3s.isEmpty()){
-                    elab.setError("Nota no válida");
+                    elab.setError(getResources().getString(R.string.error));
                     num4d = 0;
                     flag=1;
 
@@ -75,13 +76,13 @@ public class MainActivity extends ActionBarActivity {
                     num3d = Double.parseDouble(num3s);
                 if(num3d>5){
                     flag=1;
-                    elab.setError("Nota no válida");
+                    elab.setError(getResources().getString(R.string.error));
                 }
 
                 String num4s = eproyecto.getText().toString();
 
                 if(num4s.isEmpty()){
-                    eproyecto.setError("Nota no válida");
+                    eproyecto.setError(getResources().getString(R.string.error));
                     num4d = 0;
                     flag=1;
 
@@ -90,7 +91,7 @@ public class MainActivity extends ActionBarActivity {
                     num4d = Double.parseDouble(num4s);
                 if(num4d>5){
                     flag=1;
-                    eproyecto.setError("Nota no válida");
+                    eproyecto.setError(getResources().getString(R.string.error));
                 }
 
                 if(flag==0)
@@ -124,4 +125,20 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        final TextView total = (TextView) findViewById(R.id.tDefinitiva);
+        String t = total.getText().toString();
+        outState.putString(STATE_resultado,t);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        final TextView total = (TextView) findViewById(R.id.tDefinitiva);
+        total.setText(savedInstanceState.getString(STATE_resultado));
+    }
+
 }

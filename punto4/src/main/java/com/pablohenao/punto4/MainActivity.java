@@ -62,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                flag=3;
+                flag=2;
                 elado.setEnabled(false);
                 ealtura.setEnabled(true);
                 eradio.setEnabled(false);
@@ -92,38 +92,38 @@ public class MainActivity extends ActionBarActivity {
                 double based = 0;
                 double resultado=0;
 
-                if (elado.isEnabled()){
+                if (flag==1 && elado.isEnabled()){
                     String lado = elado.getText().toString();
                     if(lado.isEmpty()){
-                        elado.setError("Completar");
+                        elado.setError("Empty");
                         ladod=0;
                     }
                     else
                     ladod = Double.parseDouble(lado);
                 }
-                else if (ealtura.isEnabled() && ebase.isEnabled()){
+                else if (flag==2 && ealtura.isEnabled() && ebase.isEnabled()){
                     //then the button is enabled.
                     String altura = ealtura.getText().toString();
                     String base = ebase.getText().toString();
                     if(altura.isEmpty()){
-                        ealtura.setError("Completar");
+                        ealtura.setError("Empty");
                         alturad = 0;
                     }
                     else
                         alturad = Double.parseDouble(altura);
                     if(base.isEmpty()){
 
-                        ebase.setError("Completar");
+                        ebase.setError("Empty");
                         based=0;
                     }
                     else
                         based = Double.parseDouble(base);
                 }
-                else if (eradio.isEnabled()){
+                else if (flag==4 &&eradio.isEnabled()){
 
                     String radio = eradio.getText().toString();
                     if(radio.isEmpty()){
-                        eradio.setError("Campo Vacio");
+                        eradio.setError("Empty");
                         radiod=0;
                     }
                     else
@@ -163,6 +163,22 @@ public class MainActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("bandera",flag);
+        TextView TxResul = (TextView) findViewById(R.id.tResultado);
+        outState.putString("resultado",TxResul.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        TextView TxResul = (TextView) findViewById(R.id.tResultado);
+        flag = savedInstanceState.getInt("bandera",flag);
+        TxResul.setText(savedInstanceState.getString("resultado"));
     }
 
     @Override

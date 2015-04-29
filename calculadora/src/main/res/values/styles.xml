@@ -5,4 +5,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="FuenteTipo2" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/darkblue</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="FuenteTipo2b" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
 </resources>

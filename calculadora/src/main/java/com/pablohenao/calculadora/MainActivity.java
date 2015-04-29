@@ -15,6 +15,7 @@ public class MainActivity extends ActionBarActivity {
 
     int flag = 0;
     double resultado = 0;
+    static final String STATE_resultado = "saveresultado";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
 
                 String num1s = enum1.getText().toString();
                 if(num1s.isEmpty()){
-                    enum1.setError("Completar");
+                    enum1.setError("Empty");
                     num1d = 0;
                     num2d=0;
                 }
@@ -47,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
 
                 String num2s = enum2.getText().toString();
                 if(num2s.isEmpty()){
-                    enum2.setError("Completar");
+                    enum2.setError("Empty");
                     num1d=0;
                     num2d = 0;
                 }
@@ -124,6 +125,24 @@ public class MainActivity extends ActionBarActivity {
                     flag=4;
                     break;
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        final TextView total = (TextView) findViewById(R.id.tResultado);
+        String t = total.getText().toString();
+        outState.putString(STATE_resultado,t);
+        outState.putInt("bandera",flag);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        final TextView total = (TextView) findViewById(R.id.tResultado);
+        total.setText(savedInstanceState.getString(STATE_resultado));
+        flag = savedInstanceState.getInt("bandera",flag);
+
     }
 }
 
