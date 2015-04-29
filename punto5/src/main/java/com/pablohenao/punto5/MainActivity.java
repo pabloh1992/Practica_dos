@@ -61,56 +61,56 @@ public class MainActivity extends ActionBarActivity {
                 tTel.setText(eTelefono.getText());
 
                 if (flag == 1) {
-                    tsexo.setText("Hombre");
+                    tsexo.setText(getString(R.string.hombre));
                 }
                 if (flag == 2) {
-                    tsexo.setText("Mujer");
+                    tsexo.setText(getString(R.string.mujer));
                 }
 
                 if (checkflag == 1)
-                    hobbies.setText("Deporte");
+                    hobbies.setText(getString(R.string.hob1));
 
                 if (checkflag == 2)
-                    hobbies.setText("Leer");
+                    hobbies.setText(getString(R.string.hob2));
 
                 if (checkflag == 4)
-                    hobbies.setText("Videojuegos");
+                    hobbies.setText(getString(R.string.hob3));
 
                 if (checkflag == 8)
-                    hobbies.setText("Cocinar");
+                    hobbies.setText(getString(R.string.hob4));
 
                 if (checkflag == 3)
-                    hobbies.setText("Deporte y Leer");
+                    hobbies.setText(getString(R.string.hob5));
 
                 if (checkflag == 5)
-                    hobbies.setText("Deporte y Videojuegos");
+                    hobbies.setText(getString(R.string.hob6));
 
                 if (checkflag == 9)
-                    hobbies.setText("Deporte y Cocinar");
+                    hobbies.setText(getString(R.string.hob7));
 
                 if (checkflag == 6)
-                    hobbies.setText("Leer y Videojuegos");
+                    hobbies.setText(getString(R.string.hob8));
 
                 if (checkflag == 10)
-                    hobbies.setText("Leer y Cocinar");
+                    hobbies.setText(getString(R.string.hob9));
 
                 if (checkflag == 12)
-                    hobbies.setText("Videojuegos y Cocinar");
+                    hobbies.setText(getString(R.string.hob10));
 
                 if (checkflag == 7)
-                    hobbies.setText("Deporte, Leer y Videojuegos");
+                    hobbies.setText(getString(R.string.hob11));
 
                 if (checkflag == 14)
-                    hobbies.setText("Leer, Videojuegos y Cocinar");
+                    hobbies.setText(getString(R.string.hob12));
 
                 if (checkflag == 11)
-                    hobbies.setText("Deporte, Leer y Cocinar");
+                    hobbies.setText(getString(R.string.hob13));
 
                 if (checkflag == 13)
-                    hobbies.setText("Deporte, Videojuegos y Cocinar");
+                    hobbies.setText(getString(R.string.hob14));
 
                 if (checkflag == 15)
-                    hobbies.setText("Deporte, Leer, Videojuegos y Cocinar");
+                    hobbies.setText(getString(R.string.hob15));
 
                 if (checkflag == 0)
                     hobbies.setText("Hobbies");
