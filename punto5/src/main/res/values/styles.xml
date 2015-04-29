@@ -5,4 +5,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="FuenteTipo5" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/indigo</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="FuenteTipo5b" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textStyle">italic</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
 </resources>

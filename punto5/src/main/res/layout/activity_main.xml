@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:text="@string/nombre"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo5"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/correo"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo5"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:text="@string/tel"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo5"
             android:layout_weight="1.8"/>
 
         <EditText
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sexo"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo5"
             android:layout_weight="1.8"/>
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -92,11 +92,13 @@
             <RadioButton android:id="@+id/ehombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/FuenteTipo5b"
                 android:text="@string/hombre"
                 android:onClick="onRadioButtonClicked"/>
             <RadioButton android:id="@+id/emujer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/FuenteTipo5b"
                 android:text="@string/mujer"
                 android:onClick="onRadioButtonClicked"/>
 
@@ -114,7 +116,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ciudad"
             android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/FuenteTipo5"
             android:layout_weight="1.8"/>
 
 
@@ -136,21 +138,25 @@
         <CheckBox android:id="@+id/checkbox_h1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo5b"
             android:text="@string/deporte"
             android:onClick="onCheckboxClicked"/>
         <CheckBox android:id="@+id/checkbox_h2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo5b"
             android:text="@string/leer"
             android:onClick="onCheckboxClicked"/>
         <CheckBox android:id="@+id/checkbox_h3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo5b"
             android:text="@string/videojuegos"
             android:onClick="onCheckboxClicked"/>
         <CheckBox android:id="@+id/checkbox_h4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="@style/FuenteTipo5b"
             android:text="@string/cocinar"
             android:onClick="onCheckboxClicked"/>
 
@@ -175,6 +181,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre"
+        android:textAppearance="@style/FuenteTipo5b"
         android:textSize="20dp"
         android:id="@+id/tNombre"/>
 
@@ -182,6 +189,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/correo"
+        android:textAppearance="@style/FuenteTipo5b"
         android:textSize="20dp"
         android:id="@+id/tCorreo"/>
 
@@ -190,6 +198,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="@string/tel"
+        android:textAppearance="@style/FuenteTipo5b"
         android:id="@+id/tTel"/>
 
     <TextView
@@ -197,6 +206,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="@string/sexo"
+        android:textAppearance="@style/FuenteTipo5b"
         android:id="@+id/tsexo"/>
 
     <TextView
@@ -204,12 +214,14 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="@string/hobbie"
+        android:textAppearance="@style/FuenteTipo5b"
         android:id="@+id/thobbie"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/ciudad"
+        android:textAppearance="@style/FuenteTipo5b"
         android:textSize="20dp"
         android:id="@+id/tciudad"
         />
@@ -218,6 +230,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/nacimiento"
+        android:textAppearance="@style/FuenteTipo5b"
         android:textSize="20dp"
         android:id="@+id/tnacimiento"
         />

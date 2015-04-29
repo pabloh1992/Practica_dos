@@ -266,5 +266,54 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+
+        final TextView tName = (TextView) findViewById(R.id.tNombre);
+        final TextView tMail = (TextView) findViewById(R.id.tCorreo);
+        final TextView tTel = (TextView) findViewById(R.id.tTel);
+        final TextView tsexo = (TextView) findViewById(R.id.tsexo);
+        final TextView hobbies = (TextView) findViewById(R.id.thobbie);
+        final TextView tciudad = (TextView) findViewById(R.id.tciudad);
+        final TextView tnacimiento = (TextView) findViewById(R.id.tnacimiento);
+
+
+        outState.putInt("banderacheck",checkflag);
+        outState.putString("sexo",tsexo.getText().toString());
+        outState.putString("hobb",hobbies.getText().toString());
+        outState.putString("ciudad",tciudad.getText().toString());
+        outState.putString("fecha",tnacimiento.getText().toString());
+        outState.putString("nomb",tName.getText().toString());
+        outState.putString("correo",tMail.getText().toString());
+        outState.putString("telef",tTel.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        checkflag = savedInstanceState.getInt("banderacheck",checkflag);
+
+        final TextView tName = (TextView) findViewById(R.id.tNombre);
+        final TextView tMail = (TextView) findViewById(R.id.tCorreo);
+        final TextView tTel = (TextView) findViewById(R.id.tTel);
+        final TextView tsexo = (TextView) findViewById(R.id.tsexo);
+        final TextView hobbies = (TextView) findViewById(R.id.thobbie);
+        final TextView tciudad = (TextView) findViewById(R.id.tciudad);
+        final TextView tnacimiento = (TextView) findViewById(R.id.tnacimiento);
+
+        tsexo.setText(savedInstanceState.getString("sexo"));
+        hobbies.setText(savedInstanceState.getString("hobb"));
+        tciudad.setText(savedInstanceState.getString("ciudad"));
+        tnacimiento.setText(savedInstanceState.getString("fecha"));
+
+        tName.setText(savedInstanceState.getString("nomb"));
+        tMail.setText(savedInstanceState.getString("correo"));
+        tTel.setText(savedInstanceState.getString("telef"));
+
+    }
+
+
 
 }
